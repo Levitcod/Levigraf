@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Графики из Excel</title>
+    <style>
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="top-right">
+    <a href="/analytical">Аналитический анализ</a> |
+    <a href="/instruktion" target="_blank">Инструкция</a>
+</div>
+
+    <h2>Загрузите до 5 файлов (.xlsx)</h2>
+    <!-- остальной контент формы без изменений -->
+
+    <form method="post" enctype="multipart/form-data">
+    <div style="margin-bottom: 15px;">
+        <label><strong>Название графика:</strong>
+            <input type="text" name="plot_title" value="{{ request.form.plot_title or 'График по загруженным файлам' }}"
+                   style="width: 300px; padding: 4px;">
+        </label>
+    </div>
+
+    {% for i in range(1, 6) %}
+        <div style="margin-bottom: 10px;">
+            Файл {{ i }}:
+            <input type="file" name="file{{ i }}" accept=".xlsx">
+            <label>
+                <input type="checkbox" name="connect{{ i }}" checked> Соединять точки
+            </label>
+        </div>
+    {% endfor %}
+
+    <button type="submit">Построить график</button>
+</form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if plot_html %}
+        <h3>Общий график:</h3>
+        {{ plot_html|safe }}
+    {% endif %}
+
+
+</body>
+</html>

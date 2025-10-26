@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Инструкция</title>
+    <style> h3
+              {
+                 color: red;
+              }
+</style>
+</head>
+<body>
+    <h1>Инструкция</h1>
+    <p>Сайт строит графики по точкам из Excel-файла (расширение <code>.xlsx</code>). Для построения графиков загрузите файл, нажав на кнопку подгрузки.</p>
+    <p>Можно загружать до 5 файлов. Если хотите соединить точки, выберите соответствующий пункт рядом с именем вашего файла.</p>
+    <p>Пример файла: <a href="/static/test.xlsx" download="test.xlsx">скачать пример</a></p>
+    <p> цвета задаются по умолчанию:</p>
+    <table style="border-collapse: collapse; border: 3px solid black;">
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">номер файла</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">цвет</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">1</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">синий</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">2</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">красный</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">3</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">зеленый</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">4</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">черный</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">5</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">серый</td>
+  </tr>
+</table>
+    <p> в Аналитическом режиме вы можете подгрузить до 3 файлов с точками и сравнить с 1 или двумя функциями по средствам их рисовки</p>
+    <table style="border-collapse: collapse; border: 3px solid black;">
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">файл или функция</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">цвет</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">первая функция</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">синий</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">вторая функция</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">красный</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">первый файл</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">зеленый</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">второй файл</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">черный</td>
+  </tr>
+  <tr>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">третий файл</td>
+    <td style="border: 3px solid black; padding: 8px; text-align: center;">серый</td>
+  </tr>
+</table>
+
+    <p><H3 color="red">Важно!</H3> названия осей берутся из файла для оси x  из клетки А1, для оси y из В1. Если файлов несколько, то названия берутся из первого файла</p>
+
+</body>
+</html>
